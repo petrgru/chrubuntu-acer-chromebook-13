@@ -309,8 +309,10 @@ echo 'install mwifiex_sdio /sbin/modprobe --ignore-install mwifiex_sdio && sleep
 # BIG specific files here
 cp /etc/X11/xorg.conf.d/tegra.conf /tmp/urfs/usr/share/X11/xorg.conf.d/
 l4tdir=`mktemp -d`
-l4t=Tegra124_Linux_R21.4.0_armhf.tbz2
-wget -P ${l4tdir} http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/${l4t}
+#l4t=Tegra124_Linux_R21.4.0_armhf.tbz2
+l4t=Tegra210_Linux_R23.1.1_armhf.tbz2
+#wget -P ${l4tdir} http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/${l4t}
+wget -P ${l4tdir} http://developer.download.nvidia.com/embedded/L4T/r23_Release_v1.0/${l4t}
 #wget -P ${l4tdir} https://developer.nvidia.com/sites/default/files/akamai/mobile/files/L4T/${l4t}
 cd ${l4tdir}
 tar xvpf ${l4t}
